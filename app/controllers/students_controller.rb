@@ -4,8 +4,7 @@ class StudentsController < ApplicationController
         render json: students
     end
 
-    # Get all the Students Grades With Id
-
+    # Get all the Students Grades With Ordered by Id in descending order
     def grades
         grades = Student.all.order(grade: :desc)
         render json: grades
